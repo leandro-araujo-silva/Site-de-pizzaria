@@ -3,7 +3,7 @@
 ## Demonstração 📸
 
 <div align="center" >
-  <img src="_imagens/pizzaria1.gif" alt="demo-web" height="400">
+  <img src="_imagens/pizzaria.gif" alt="demo-web" height="400">
 </div>
 
 ---
