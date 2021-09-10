@@ -1,103 +1,132 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8"/>
-    <title>Hora do Pedido</title>
-    <link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
-    <link rel="stylesheet" href="_css/form.css"/>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="_css/pedido.css" rel="stylesheet" />
+    <title>Peça aqui</title>
+  </head>
+  <body>
+    <header>
+      <h1>Jajá Pizzas</h1>
+      <p>Monte o seu pedido e receba em 15 minutos!</p>
+    </header>
+    <main>
+      <div class="dish">
+        <h1 class="primeiro">Primeiro o seu prato</h1>
 
-<body>
-    <div id="interface">
+        <section id="section" onclick="escolhaFrango()">
+          <div class="prato">
+            <h3>Frango Yin-Yang</h3>
+            <p>Um pouco de batata, um pouco de salada</p>
+            <p><strong>R$ 19,90</strong></p>
+          </div>
+          <!--prato-->
 
-        <header id="cabecalho">
-            <hgroup>
-                <h1>Pizzaria do Jajá</h1>
-                <h2>Faça aqui o seu pedido!</h2>
-            </hgroup>
-        </header>
+          <div class="image">
+            <img
+              src="https://www.kitano.com.br/wp-content/uploads/2019/07/SSP_2480-Frango-assado-com-salsa-e-cebolinha-1.jpg"
+              alt=""
+            />
+          </div>
+        </section>
+
+        <section id="section1" onclick="escolhaCarne()">
+          <div class="prato">
+            <h3>Carne e salada</h3>
+            <p>Partida ao meio para aparecer mais carne</p>
+            <p><strong>R$ 24,90</strong></p>
+          </div>
+          <!--prato-->
+
+          <div class="image">
+            <img
+              src="https://d37k6lxrz24y4c.cloudfront.net/v2/pt-br/e9dc924f238fa6cc29465942875fe8f0/55047e37-1322-4568-a78d-052dc2d22fc0-600.jpg"
+              alt=""
+            />
+          </div>
+        </section>
+      </div>
+
+      <div class="bebida">
+        <h1 class="primeiro">Agora sua bebida</h1>
+
+        <section id="section2" onclick="escolhaCoca()">
+          <div class="prato">
+            <h3>Coca-cola gelada</h3>
+            <p>Normal, zero ou stevia. Vai na sorte</p>
+            <p><strong>R$ 5,90</strong></p>
+          </div>
+          <!--prato-->
+
+          <div class="image">
+            <img
+              src="https://w3.i.uol.com.br/novas-midias/2012/01/18/a-coca-cola-lidera-a-lista-das-marcas-mais-valiosas-do-mundo-divulgada-pela-interbrands-o-valor-da-marca-e-avaliado-em-us-719-bilhoes-1326908660707_300x300.jpg.webp"
+              alt=""
+            />
+          </div>
+        </section>
+
+        <section id="section3" onclick="escolhaRefri()">
+          <div class="prato">
+            <h3>Refresco</h3>
+            <p>Podia ser suco, mas leva água.</p>
+            <p><strong>R$ 3,90</strong></p>
+          </div>
+          <!--prato-->
+
+          <div class="image">
+            <img
+              src="https://images.squarespace-cdn.com/content/v1/5717d28a4d088e58f3740f6d/1582756854735-TK62CEUEIO7FU036U6NG/IMG_5799.jpeg"
+              alt=""
+            />
+          </div>
+        </section>
+      </div>
+      <!--bebida-->
+
+      <div class="sobremesa">
+        <h1 class="primeiro">Por fim, sua sobremesa</h1>
+
+        <section id="section4" onclick="escolhaPudim()">
+          <div class="prato">
+            <h3>Pudim</h3>
+            <p>Apenas um lindo e brilhante pudim!</p>
+            <p><strong>R$ 7,90</strong></p>
+          </div>
+          <!--prato-->
+
+          <div class="image">
+            <img
+              src="http://www.irismassas.com.br/wp-content/uploads/2015/06/pudim-de-leite.jpg"
+              alt=""
+            />
+          </div>
+        </section>
+
+        <section id="section5" onclick="escolhaSorvete()">
+          <div class="prato">
+            <h3>Soverte bem gelado</h3>
+            <p>Várias bolinhas como na foto.</p>
+            <p><strong>R$ 6,90</strong></p>
+          </div>
+          <!--prato-->
+
+          <div class="image">
+            <img
+              src="http://difusora890.com.br/wp-content/uploads/2016/08/omiljena-proljetna-slastica-sladoled-3022-469x313-20140513114214.jpg"
+              alt=""
+            />
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <div class="button" onclick="pedido()">
+      <button><strong>Finalizar pedido</strong></button>
     </div>
 
-    <section id="corpo-full">
-        <article id="noticia-principal">
-            <header id="cabecalho-artigo">
-                
-            </header>
-
-                <form method="post" id="fContato" action="mailtocontato@cursvideo.com" oninput="calc_total();">
-
-                    <fieldset id="usuario"><legend>Identificação do Usuário</legend>
-                        <p><label for="cNome">Nome:</label> 
-                        <input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome Completo" /></p>
-                        <fieldset id="sexo"><legend>Sexo</legend>                
-                            <input type="radio" name="tSexo" id="cMasc"/> <label for="cMasc">Masculino</label><br/>
-                            <input type="radio" name="tSexo" id="cFem"/> <label for="cFem">Feminino</label>
-                        </fieldset>
-                    </fieldset>
-
-                    <fieldset id="endereco"><legend>Endereço do Usuário</legend>
-                        <p><label for="cRua">Logradouro:</label> 
-                        <input type="text" name="tRua" id="cRua" size="20" maxlength="80" placeholder="Rua, Av, Trav, ..."/></p>
-                        <p><label for="cNum">Número:</label> 
-                        <input type="number" name="tNum" id="cNum" min="0" max="99999"/></p>
-                        <p><label for="cCid">Cidade:</label>
-                        <input type="text" name="tCid" id="cCid" maxlenght="40" size="20" placeholder="Sua Cidade" list="cidades"/></p>
-                        <datalist id="cidades">
-                            <option value="Viçosa"></option>
-                            <option value="Mar Vermelho"></option>
-                            <option value="Cajueiro"></option>
-                            <option value="Capela"></option>
-                            <option value="Atalaia"></option>
-                            <option value="Maceió"></option>
-                        </datalist>
-                    </fieldset>
-
-                    <fieldset id="mensagem"><legend>Mensagem do Usuário</legend>
-                        <p><label for="cUrg">Grau de Urgência:</label>
-                            Mín<input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2"/>Máx</p>                      
-                        <p><label for="cMsg">Mensagem:</label>
-                        <textarea name="tMsg" id="cMsg" cols="45" rows="5" placeholder="Deixe aqui a sua mensagem"></textarea></p>
-                    </fieldset>
-
-                    <fieldset id="pedido"><legend>Solicite o seu lanche</legend>
-                        <p><input type="checkbox" name="tPed" id="cPed"/>
-                        <label for="cPed">Gostaria de adquirir uma Pizza</label></p>
-                        <fieldset id="tamanho"><legend>Tamanho</legend>
-                            <input type="radio" name="cTam" id="cPeq"/> <label for="cPeq">Pequena</label>
-                            <input type="radio" name="cTam" id="cMed"/> <label for="cMed">Média</label>
-                            <input type="radio" name="cTam" id="cGra"/> <label for="cGra">Grande</label>
-                            <p><label for="cQtd">Quantidade:</label>
-                            <input type="number" name="tQtd" id="cQtd" min="0" max="5" value="0"/></p>
-                            <p><label for="cTot">Preço Total: R$</label>
-                            <input type="text" name="tTot" id="cTot" placeholder="Total a Pagar" readonly/></p>
-                        </fieldset><!--#tamanho-->
-                        <p><input type="checkbox" name="tPast" id="cPast"/>
-                        <label for="cPast">Gostaria de adquirir pastéis</label></p>
-                        <fieldset id="sabores"><legend>Sabores</legend>
-                            <input type="radio" name="cQuei" id="cQuei"/> <label for="cQuei">Queijo</label>
-                            <p><label for="cQtd">Quantidade:</label>
-                            <input type="number" name="tQtd" id="cQtd" min="0" max="10" value="0"/></p>
-                            <input type="radio" name="cFran" id="cFran"/> <label for="cFran">Frango</label>
-                            <p><label for="cQtd">Quantidade:</label>
-                            <input type="number" name="tQtd" id="cQtd" min="0" max="10" value="0"/></p>
-                            <input type="radio" name="cCal" id="cCal"/> <label for="cCal">Calabresa</label>
-                            <p><label for="cQtd">Quantidade:</label>
-                            <input type="number" name="tQtd" id="cQtd" min="0" max="10" value="0"/></p>
-                            <p><label for="cTot">Preço Total: R$</label>
-                            <input type="text" name="tTot" id="cTot" placeholder="Total a Pagar" readonly/></p>
-                    </fieldset>
-
-                <input type="image" name="tEnviar" src="_imagens/botao-enviar.png"/>
-
-                </form>
-
-        </article>
-    </section>
-
-        <footer id="rodape">
-            <p>Copyright &copy; 2020 - by Leandro Araújo </br>
-                <a href="http://facebook.com/cursoemvideo" target="_blank">Facebook</a> | <a href="http://twitter.com/cursoemvideo" target="_blank"> Twitter </a></p>
-        </footer>
-</div>
-</body>
+    <script src="_js/script.js"></script>
+  </body>
 </html>
